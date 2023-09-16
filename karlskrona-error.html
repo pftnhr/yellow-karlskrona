@@ -1,0 +1,11 @@
+<?php $this->yellow->layout("header") ?>
+
+<article>
+	<header>
+		<h1><?php echo $this->yellow->page->getHtml("titleContent") ?></h1>
+	</header>
+		
+	<?php echo $this->yellow->page->getContentHtml() ?>
+</article>
+
+<?php $this->yellow->layout("footer") ?>

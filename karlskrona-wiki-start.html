@@ -1,0 +1,23 @@
+<?php $this->yellow->layout("header") ?>
+<article>
+
+<header>
+	<h1><?php echo $this->yellow->page->getHtml("titleContent") ?></h1>
+</header>
+<?php $pages = $this->yellow->page->getPages("wiki")->paginate($this->yellow->system->get("wikiPaginationLimit")) ?>
+<ul>
+<?php $section = $sectionNew = "" ?>
+<?php foreach ($pages as $page): ?>
+<?php if ($this->yellow->page->get("wikiChronologicalOrder")): ?>
+<?php $sectionNew = htmlspecialchars($page->getDate("modified")) ?>
+<?php else: ?>
+<?php $sectionNew = htmlspecialchars(strtoupperu(substru($page->get("title"), 0, 1))) ?>
+<?php endif ?>
+<?php if ($section!=$sectionNew) { $section = $sectionNew; echo "</ul><h2>$section</h2><ul>\n"; } ?>
+<li><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></li>
+<?php endforeach ?>
+</ul>
+<?php $this->yellow->layout("pagination", $pages) ?>
+
+</article>
+<?php $this->yellow->layout("footer") ?>
