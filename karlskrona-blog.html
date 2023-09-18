@@ -6,36 +6,36 @@
 <?php endif ?>
 
 <section>
-	<article class="<?php echo $this->yellow->page->getHtml("entryClass") ?>">
-		<header>
-			<h2>
-				<?php echo $this->yellow->page->getHtml("titleContent") ?>
-			</h2>
-			<p>
-				<?php echo $this->yellow->page->getDateHtml("published") ?>
-				<?php echo $this->yellow->language->getTextHtml("blogBy") ?>
-				<?php $authorCounter = 0; foreach (preg_split("/\s*,\s*/", $this->yellow->page->get("author")) as $author) { if (++$authorCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getPage("blogStart")->getLocation(true).$this->yellow->lookup->normaliseArguments("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?>
-			</p>
-			<?php if ($this->yellow->page->isExisting("tag")): ?>
-			<p>
-				<?php echo $this->yellow->language->getTextHtml("blogTag") ?> <?php $tagCounter = 0; foreach (preg_split("/\s*,\s*/", $this->yellow->page->get("tag")) as $tag) { if (++$tagCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getPage("blogStart")->getLocation(true).$this->yellow->lookup->normaliseArguments("tag:$tag")."\">".htmlspecialchars($tag)."</a>"; } ?>
-			</p>
-			<?php endif ?>
-		</header>
+<article class="<?php echo $this->yellow->page->getHtml("entryClass") ?>">
+<header>
+<h2>
+<?php echo $this->yellow->page->getHtml("titleContent") ?>
+</h2>
+<p>
+<?php echo $this->yellow->page->getDateHtml("published") ?>
+<?php echo $this->yellow->language->getTextHtml("blogBy") ?>
+<?php $authorCounter = 0; foreach (preg_split("/\s*,\s*/", $this->yellow->page->get("author")) as $author) { if (++$authorCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getPage("blogStart")->getLocation(true).$this->yellow->lookup->normaliseArguments("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?>
+</p>
+<?php if ($this->yellow->page->isExisting("tag")): ?>
+<p>
+<?php echo $this->yellow->language->getTextHtml("blogTag") ?> <?php $tagCounter = 0; foreach (preg_split("/\s*,\s*/", $this->yellow->page->get("tag")) as $tag) { if (++$tagCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getPage("blogStart")->getLocation(true).$this->yellow->lookup->normaliseArguments("tag:$tag")."\">".htmlspecialchars($tag)."</a>"; } ?>
+</p>
+<?php endif ?>
+</header>
 
-		<?php echo $this->yellow->page->getContentHtml() ?>
-		
-		<?php echo $this->yellow->page->getExtraHtml("profile") ?>
-		<?php echo $this->yellow->page->getExtraHtml("link") ?>		
-		
-	</article>
+<?php echo $this->yellow->page->getContentHtml() ?>
+
+<?php echo $this->yellow->page->getExtraHtml("profile") ?>
+<?php echo $this->yellow->page->getExtraHtml("link") ?>		
+
+</article>
 </section>
 
 <?php if ($this->yellow->page->getExtraHtml("comment")): ?>
 <section>
-	<article>
-		<?php echo $this->yellow->page->getExtraHtml("comment") ?>
-	</article>
+<article>
+<?php echo $this->yellow->page->getExtraHtml("comment") ?>
+</article>
 </section>
 <?php endif ?>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="<?php echo $this->yellow->page->getHtml("language") ?>">
-	
+
 <head>
 <title><?php echo $this->yellow->page->getHtml("titleHeader") ?></title>
 <meta charset="utf-8" />
@@ -11,13 +11,13 @@
 <?php echo $this->yellow->page->getExtraHtml("header") ?>
 </head>
 
-<body class="container <?php echo "page layout-".$this->yellow->page->getHtml("layout") ?>">
-	
-<header>
+<body>
+
+<header class="container">
 <h1><a href="<?php echo $this->yellow->page->getBase(true)."/" ?>"><?php echo $this->yellow->page->getHtml("sitename") ?></a></h1>
 <?php echo $this->yellow->page->getPage("header")->getContentHtml() ?>
 
 <?php $this->yellow->layout("navigation") ?>
 </header>
 
-<main>
+<main class="container <?php echo "page layout-".$this->yellow->page->getHtml("layout") ?>">

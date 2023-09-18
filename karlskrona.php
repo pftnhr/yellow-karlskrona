@@ -25,7 +25,6 @@ class YellowKarlskrona {
         $output = null;
         if ($name=="header") {
             $themeLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("CoreThemeLocation");
-            $output .= "<script type=\"text/javascript\" defer=\"defer\" src=\"{$themeLocation}karlskrona.js\"></script>\n";
         }
         return $output;
     }

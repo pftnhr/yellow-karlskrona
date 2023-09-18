@@ -2,7 +2,7 @@
 <article>
 
 <header>
-	<h1><?php echo $this->yellow->page->getHtml("titleContent") ?></h1>
+<h1><?php echo $this->yellow->page->getHtml("titleContent") ?></h1>
 </header>
 <?php $pages = $this->yellow->page->getPages("wiki")->paginate($this->yellow->system->get("wikiPaginationLimit")) ?>
 <ul>
