@@ -1,6 +1,6 @@
 # Karlskrona 0.8.18
 
-Karlskrona is intended as a semantic starting point for theme developers.
+Karlskrona is a semantic theme.
 
 <p align="center"><img src="karlskrona-screenshot.png?raw=true" alt="Screenshot"></p>
 

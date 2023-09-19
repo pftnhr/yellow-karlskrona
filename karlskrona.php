@@ -19,13 +19,4 @@ class YellowKarlskrona {
             $this->yellow->system->save($fileName, array("theme" => $this->yellow->system->getDifferent("theme")));
         }
     }
-
-    // Handle page extra data
-    public function onParsePageExtra($page, $name) {
-        $output = null;
-        if ($name=="header") {
-            $themeLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("CoreThemeLocation");
-        }
-        return $output;
-    }
 }
