@@ -1,2 +1,6 @@
+.gitattributes export-ignore
+LICENSE.md export-ignore
+README*.md export-ignore
+SCREENSHOT*.png export-ignore
 # Auto detect text files and perform LF normalization
 * text=auto
