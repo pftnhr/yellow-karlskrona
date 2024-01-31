@@ -13,8 +13,7 @@
 <article class="<?php echo $page->getHtml("entryClass") ?>">
 <header class="entry-title">
 <h2><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></h2>
-<p><?php echo $page->getDateHtml("published") ?>
-<?php echo $this->yellow->language->getTextHtml("blogBy") ?>
+<p><?php echo $page->getDateHtml("published") . " " . $this->yellow->language->getTextHtml("blogBy") . " "; ?>
 <?php $authorCounter = 0; foreach (preg_split("/\s*,\s*/", $page->get("author")) as $author) { if (++$authorCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getLocation(true).$this->yellow->lookup->normaliseArguments("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?>
 </p>
 </header>

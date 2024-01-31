@@ -12,8 +12,7 @@
 <?php echo $this->yellow->page->getHtml("titleContent") ?>
 </h2>
 <p>
-<?php echo $this->yellow->page->getDateHtml("published") ?>
-<?php echo $this->yellow->language->getTextHtml("blogBy") ?>
+<?php echo $this->yellow->page->getDateHtml("published") . " " . $this->yellow->language->getTextHtml("blogBy") . " "; ?>
 <?php $authorCounter = 0; foreach (preg_split("/\s*,\s*/", $this->yellow->page->get("author")) as $author) { if (++$authorCounter>1) echo ", "; echo "<a href=\"".$this->yellow->page->getPage("blogStart")->getLocation(true).$this->yellow->lookup->normaliseArguments("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?>
 </p>
 <?php if ($this->yellow->page->isExisting("tag")): ?>
