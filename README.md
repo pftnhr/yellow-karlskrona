@@ -1,4 +1,4 @@
-# Karlskrona 0.8.18
+# Karlskrona 0.8.19
 
 Karlskrona is a semantic theme.
 
@@ -16,7 +16,7 @@ The default theme is defined in file `system/extensions/yellow-system.ini`. A di
 
 ## Acknowledgements
 
-This extension includes [Pico.css](https://github.com/picocss) a minimal CSS Framework for semantic HTML. Elegant styles for all native HTML elements without `.classes` and dark mode automatically enabled. Many thanks to [Lucas Larroche](https://github.com/lucaslarroche) for this beautiful and versatile framework. 
+This extension now includes [Pico CSS v2.0.3](https://github.com/picocss) a minimal CSS Framework for semantic HTML. Elegant styles for all native HTML elements without `.classes` and dark mode automatically enabled. Many thanks to [Lucas Larroche](https://github.com/lucaslarroche) for this beautiful and versatile framework.
 
 ## Designer
 
