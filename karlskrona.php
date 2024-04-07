@@ -2,7 +2,7 @@
 // Karlskrona extension, https://github.com/pftnhr/yellow-karlskrona
 
 class YellowKarlskrona {
-    const VERSION = "0.8.19";
+    const VERSION = "0.9.1";
     public $yellow;         // access to API
 
     // Handle initialisation
